@@ -19,14 +19,14 @@ $("#submit-btn").on("click", function(event){
 		]
 	};
 
-	$.post("/api/friends", newPal, 
-		function(data){
-			if(data){
-				alert("Success!");
-			}
-			else{
-				alert("Fail :(");
-			}
+	// Sends user's dog to backend to find a matching dog pal by comparing scores
+	$.post("/api/friends", newPal, function(data){
+		if(data){
+			$("#match-name").text(data.name);
+			$("#match-photo").attr("src", data.photo);
+
+			$(".modal").modal("show");
+		}
 	});
 });
 
