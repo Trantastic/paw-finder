@@ -7,8 +7,10 @@ var app = express();
 var PORT = process.env.PORT || 3000;
 
 // Setup for express and body-parser
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+
+app.use(express.static("./app/public"));
 
 // Points at our route js files
 require("./app/routing/apiRoutes")(app);

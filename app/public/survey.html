@@ -6,7 +6,6 @@
     <title>Paw Finder | Survey</title>
     <!-- Bootstrap v4 -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="style.css">
     <!-- Favicon -->
@@ -134,19 +133,22 @@
 
             <button type="submit" class="btn btn-primary w-25 mt-5" id="submit-btn">Submit</button>
         </form>
+        <div class="mt-5">
+            <p><a href="/api/friends" target="_blank">API Friends</a> | <a href="https://github.com/Trantastic/paw-finder" target="_blank">Github Repo</a></p>
+        </div>
     <div>
     <!-- Modal -->
     <div class="modal" tabindex="-1" role="dialog">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title">Your Match: </h5>
+            <h5 class="modal-title font-weight-bold">Your Match:</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
-          <div class="modal-body">
-            <p id="match-name"></p>
+          <div class="modal-body mx-auto">
+            <p id="match-name" class="text-center"></p>
             <img id="match-photo">
           </div>
           <div class="modal-footer">

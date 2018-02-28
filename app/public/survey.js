@@ -21,11 +21,12 @@ $("#submit-btn").on("click", function(event){
 
 	// Sends user's dog to backend to find a matching dog pal by comparing scores
 	$.post("/api/friends", newPal, function(data){
+		// Modal with dog match
 		if(data){
 			$("#match-name").text(data.name);
 			$("#match-photo").attr("src", data.photo);
 
-			$(".modal").modal("show");
+			$(".modal").modal();
 		}
 	});
 });

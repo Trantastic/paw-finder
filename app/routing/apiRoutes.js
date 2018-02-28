@@ -25,8 +25,7 @@ module.exports = function(app){
 		var min = Math.min.apply(null, totalDiffArr);
 		var match = totalDiffArr.indexOf(min);
 
-		console.log(dogPals[match]);
 		res.json(dogPals[match]);
-
+		dogPals.push(req.body);
 	});
-}
+};
